@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.css'
 
 function populateTable(endpoint){
-fetch("www.ajuhlhansen.dk/CA2/api/person/"+ endpoint)
+fetch("https://www.ajuhlhansen.dk/CA2/api/person/"+ endpoint)
             .then(res => res.json()) //in flow1, just do it
             .then(data => {
                 // Inside this callback, and only here, the response data is available
@@ -29,7 +29,7 @@ fetch("www.ajuhlhansen.dk/CA2/api/person/"+ endpoint)
                   x.style.display = "none";
                 }
               }
-                         
+              HideOrShow("allZipcodes")      
 
             document.getElementById("table").onclick = function(){ EditOrDelete(event.srcElement.id, event.srcElement.value )}
 
@@ -72,12 +72,12 @@ fetch("www.ajuhlhansen.dk/CA2/api/person/"+ endpoint)
 
             function countPersonsWithHoppy(){
                 var hobby = document.getElementById("hobbyName");
-                fetch("www.ajuhlhansen.dk/CA2/api/person/count/"+ hobby)
+                fetch("https://www.ajuhlhansen.dk/CA2/api/person/count/f")
                 .then(res => res.json()) //in flow1, just do it
                 .then(data => {
     
     
-                    document.getElementById("countDiv").innerHTML = "the number of people with the given hobby is: "+data;
+                    document.getElementById("countDiv").innerHTML = "the number of people with the given hobby is: "+data.count;
 
                     
 
@@ -102,3 +102,50 @@ fetch("www.ajuhlhansen.dk/CA2/api/person/"+ endpoint)
                 });
 
             }
+            document.getElementById("addPerson").onclick = addPerson;
+            function addPerson(){
+
+               var firstName =  document.getElementById("firstName").value
+               var LastName =  document.getElementById("LastName").value
+               var email =  document.getElementById("email").value
+               var city =  document.getElementById("city").value
+               var zip =  document.getElementById("zip").value
+               var street =  document.getElementById("street").value
+               var addInfo =  document.getElementById("addInfo").value
+               var payload = '{\"firstname\": \"'+firstName+'\",'
+               + '\"lastname\": \"'+LastName+'\",'
+               + '\"email\": \"'+email+'\",'
+               + '\"street\": \"'+street+'\",'
+               + '\"addInfo\": \"'+addInfo+'\",'
+               + '\"city\": \"'+city+'\",'
+               + '\"zip\": \"'+zip+'\"}';
+
+
+
+          //     try {
+          //    const data = await postData('https://www.ajuhlhansen.dk/CA2/api/person', payload);
+          //      console.log(JSON.stringify(data)); // JSON-string from `response.json()` call
+          //    } catch (error) {
+          //      console.error(error);
+          //    }
+          //    
+          //    async function postData(url = '', data = {}) {
+          //      // Default options are marked with *
+          //      const response = await fetch(url, {
+          //        method: 'POST', // *GET, POST, PUT, DELETE, etc.
+          //        mode: 'cors', // no-cors, *cors, same-origin
+          //        cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+          //        credentials: 'same-origin', // include, *same-origin, omit
+          //        headers: {
+          //          'Content-Type': 'application/json'
+          //          // 'Content-Type': 'application/x-www-form-urlencoded',
+          //        },
+          //        redirect: 'follow', // manual, *follow, error
+          //        referrer: 'no-referrer', // no-referrer, *client
+          //        body: JSON.stringify(data) // body data type must match "Content-Type" header
+          //      });
+          //      return await response.json(); // parses JSON response into native JavaScript objects
+          //    }
+          //    populateTable("all");
+          //
+             }

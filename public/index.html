@@ -7,26 +7,21 @@
 </head>
 
 <body>
-    
-
+    <center>
     <h3>filter by: </h3>
     
-    get list of all zipcodes
-    add person
-
-
-    Phone Number <input type="text" id="phoneNumber" value="Enter Phone number"><br>
+    Phone Number <input type="text" id="phoneNumber" placeholder="Enter Phone number" value=""><br>
     <input type="submit" id = "phone" value="Submit">
     <br>
     <br>
-    Hobby: <input type="text" name="hobbyName" value="Enter hobby"><br>
+    Hobby: <input type="text" id="hobbyName" name="hobbyName" placeholder="Enter hobby"value=""><br>
 <input type="submit" id = "hobby" value="Submit">
 <input type="submit" id = "countHobby" value="count people with hobby">
 
   
     <br>
     <br>
-    City: <input type="text" name="CityName" value="Enter City"><br>
+    City: <input type="text" name="CityName" placeholder="Enter City" value=""><br>
 <input type="submit" id = "city" value="Submit">
 
 <br>
@@ -40,6 +35,8 @@
       
       </ul>
 </div>
+
+
 <table id="table" class="table">
   <thead>
       <tr>                
@@ -58,9 +55,30 @@
   </tbody>
 </table>
 
-<div id="edit">
+<h2>Add a person</h2>
 
-</div>
+First Name:<br> <input type="text" id="firstName" placeholder="Enter the firt name" value="">
+<br>
+Last Name:<br> <input type="text" id="LastName" placeholder="Enter the last name" value="">
+<br>
+Email:<br> <input type="text" id="email" placeholder="Enter email address" value="">
+<br>
+City:<br> <input type="text" id="city" placeholder="Enter city" value="">
+<br>
+Zip:<br> <input type="text" id="zip" placeholder="Enter zip" value="">
+<br>
+Street: <br><input type="text" id="street" placeholder="Enter street" value="">
+<br>
+Additional Info: <br><input type="text" id="addInfo" placeholder="Enter additional info" value="">
+<br>
+<br>
+
+
+
+<input type="submit" class="button" id = "addPerson" value="Add The Guy">
+
+
+    </center>
   <script src="bundle.js"></script>
 </body>
 
