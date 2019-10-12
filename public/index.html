@@ -7,9 +7,63 @@
 </head>
 
 <body>
-<h1>the thing is working</h1>
-<div id="div"></div>
+    
+
+    <h3>filter by: </h3>
+    
+    get list of all zipcodes
+    add person
+
+
+    Phone Number <input type="text" id="phoneNumber" value="Enter Phone number"><br>
+    <input type="submit" id = "phone" value="Submit">
+    <br>
+    <br>
+    Hobby: <input type="text" name="hobbyName" value="Enter hobby"><br>
+<input type="submit" id = "hobby" value="Submit">
+<input type="submit" id = "countHobby" value="count people with hobby">
+
+  
+    <br>
+    <br>
+    City: <input type="text" name="CityName" value="Enter City"><br>
+<input type="submit" id = "city" value="Submit">
+
+<br>
+<br>
+<input type="submit" id = "zip" value="Get all zipcodes">
+<div id="countDiv"></div>
+<div id="allZipcodes">
+  <h2>All zipcodes in the kingdom!</h2>
+    <ul>
+     <p id="zipcode"></p>
+      
+      </ul>
+</div>
+<table id="table" class="table">
+  <thead>
+      <tr>                
+          <th>First name</th>
+          <th>Last name</th>
+          <th>Email</th>
+          <th>Address</th>
+          <th>city</th>
+          <th>Hobbies</th>
+          <th>Phone</th>
+          <th>Remove</th>
+          <th>Edit</th>
+      </tr>
+  </thead>
+  <tbody id="tablebody">
+  </tbody>
+</table>
+
+<div id="edit">
+
+</div>
   <script src="bundle.js"></script>
 </body>
 
 </html>
+
+
