@@ -8,34 +8,37 @@
 
 <body>
     <center>
-    <h3>filter by: </h3>
+     
+    <h2>Get person by number: </h2>
+    <br>
+    Phone Number <input type="text" id="phoneNumber" placeholder="Enter Phone number" value="">
+    <br><br>
+    <input type="submit" id = "phone" value="Get person">
+    <br><br>
+    <h2>Filter by: </h2>
+    <br>
+    Hobby: <input type="text" id="hobbyName" placeholder="Enter hobby"value="">
+    <br><br>
+    <input type="submit" id = "hobby" value="Get persons">
+    <br><br>
+    <input type="submit" id = "countHobby" value="Count people with hobby">
+    <br><br>
+    City: <input type="text" id="CityName" placeholder="Enter City or zip" value="">
+    <br><br>
+    <input type="submit" id = "city" value="Get persons">
+
+    <br><br>
+    <input type="submit" id = "zip" value="Get all zipcodes">
+    <div id="countDiv"></div>
+    <div id="allZipcodes">
+    <br><br>
+    <h2>All zipcodes in the kingdom!</h2>
     
-    Phone Number <input type="text" id="phoneNumber" placeholder="Enter Phone number" value=""><br>
-    <input type="submit" id = "phone" value="Submit">
-    <br>
-    <br>
-    Hobby: <input type="text" id="hobbyName" name="hobbyName" placeholder="Enter hobby"value=""><br>
-<input type="submit" id = "hobby" value="Submit">
-<input type="submit" id = "countHobby" value="count people with hobby">
-
-  
-    <br>
-    <br>
-    City: <input type="text" name="CityName" placeholder="Enter City" value=""><br>
-<input type="submit" id = "city" value="Submit">
-
-<br>
-<br>
-<input type="submit" id = "zip" value="Get all zipcodes">
-<div id="countDiv"></div>
-<div id="allZipcodes">
-  <h2>All zipcodes in the kingdom!</h2>
     <ul>
-     <p id="zipcode"></p>
-      
-      </ul>
+     <p id="zipcodes"></p>
+    </ul>
 </div>
-
+<br><br>
 
 <table id="table" class="table">
   <thead>
@@ -48,7 +51,6 @@
           <th>Hobbies</th>
           <th>Phone</th>
           <th>Remove</th>
-          <th>Edit</th>
       </tr>
   </thead>
   <tbody id="tablebody">
@@ -59,13 +61,13 @@
 
 First Name:<br> <input type="text" id="firstName" placeholder="Enter the firt name" value="">
 <br>
-Last Name:<br> <input type="text" id="LastName" placeholder="Enter the last name" value="">
+Last Name:<br> <input type="text" id="lastName" placeholder="Enter the last name" value="">
 <br>
 Email:<br> <input type="text" id="email" placeholder="Enter email address" value="">
 <br>
-City:<br> <input type="text" id="city" placeholder="Enter city" value="">
+City:<br> <input type="text" id="cityInfo" placeholder="Enter city" value="">
 <br>
-Zip:<br> <input type="text" id="zip" placeholder="Enter zip" value="">
+Zip:<br> <input type="number" id="zipcode" placeholder="Enter zip" value=>
 <br>
 Street: <br><input type="text" id="street" placeholder="Enter street" value="">
 <br>
@@ -73,9 +75,11 @@ Additional Info: <br><input type="text" id="addInfo" placeholder="Enter addition
 <br>
 <br>
 
-
+<p id="error"></p>
+<br><br>
 
 <input type="submit" class="button" id = "addPerson" value="Add The Guy">
+
 
 
     </center>
