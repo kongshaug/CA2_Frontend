@@ -105,7 +105,7 @@ function countPersonsWithHoppy(){
                 .then(handleHttpErrors)
                 .then(data => {
 
-        document.getElementById("countDiv").innerHTML = "the number of people with the given hobby is: "+data.count;
+        document.getElementById("countDiv").innerHTML = "The number of people with the given hobby is: "+data.count + "<br><br>";
          })
          .catch(err => {
             if(err.status)
